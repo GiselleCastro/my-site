@@ -40,11 +40,6 @@ export const Container = styled.section`
         flex-direction: row;
         padding-inline: 4rem;
         justify-content: space-evenly;
-
-        span {
-                color: ${props => props.theme["color-45"]};
-                font-weight: 700;
-        }
     }
 
     #links {
@@ -103,6 +98,7 @@ export const Container = styled.section`
             align-items: center;
             gap: 6px;
 
+
             label {
                 letter-spacing: 2px;
                 font-size: 0.875rem;
@@ -125,6 +121,11 @@ export const Container = styled.section`
                 border: none;
                 background-color: ${props => props.theme["color-55"]}15;
                 width: 100%;
+                color: ${props => props.theme["color-65"]};
+
+                &:focus {
+                    border: 1px solid ${props => props.theme["color-50"]};
+                }
             }
 
             textarea {
@@ -135,7 +136,11 @@ export const Container = styled.section`
                 border: none;
                 background-color: ${props => props.theme["color-55"]}15;
                 width: 100%;
+                color: ${props => props.theme["color-65"]};
 
+                &:focus {
+                    border: 1px solid ${props => props.theme["color-50"]};
+                }
             }
         }
     }

@@ -7,7 +7,11 @@ import { Button } from "../Button"
 // import { BsCloudDownload } from "react-icons/bs";
 import { GiJourney } from "react-icons/gi";
 
-export function AboutMe() {
+export async function AboutMe() {
+
+    // console.log((await params))
+    // console.log(getDictionary((await params)).lang)
+
     return (
         <div id="about-me" className="box anchor">
             <Container >

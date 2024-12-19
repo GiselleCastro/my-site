@@ -1,0 +1,14 @@
+{
+    "header": {
+        "about": "About Me",
+        "portfolio": "Portfolio",
+        "contact": "Contact"
+    },
+    "footer": {
+        "text": " Designed and developed by "
+    },
+    "button": {
+        "sendMessage": "Send Message",
+        "myJourney": "My Journey"
+    }
+}

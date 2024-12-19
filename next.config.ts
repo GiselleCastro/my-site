@@ -16,6 +16,20 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+  i18n: {
+    locales: ["en-US", "pt-BR"],
+    defaultLocale: "pt-BR",
+    // domains:  [
+    //   {
+    //     domain: 'example.com',
+    //     defaultLocale: 'en-US',
+    //   },
+    //   {
+    //     domain: 'example.nl',
+    //     defaultLocale: 'pt-BR',
+    //   },
+    // ],
+  }
 };
 
 export default nextConfig;

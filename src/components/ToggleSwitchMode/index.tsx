@@ -3,11 +3,7 @@ import React from 'react';
 import { useThemeContext } from '../../context/ThemeContext';
 import { CiSun } from "react-icons/ci";
 import { IoMoonOutline } from "react-icons/io5";
-
-enum ThemeEnum {
-  Light = 'light',
-  Dark = 'dark',
-}
+import { ThemeEnum } from '../../context/ThemeContext';
 
 export const ToggleSwitchMode = (): React.ReactNode => {
   const { theme, toogleTheme } = useThemeContext();

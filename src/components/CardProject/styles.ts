@@ -7,6 +7,16 @@ padding: 1rem;
 border-radius: 16px;
 position: relative;
 border: 1px solid  ${props => props.theme["color-30"]}33;
+transition: 1s;
+
+
+&:hover{
+    background-color: ${props => props.theme["color-40"]}33;
+    border: 1px solid ${props => props.theme["color-50"]};
+    width: 100.4%;
+    box-shadow: inset 0.0em 0.0em 1em 0.5em ${props => props.theme["color-20"]};
+    transition: 0.5s;
+}
 
 .preview {
     position: absolute;

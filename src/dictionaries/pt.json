@@ -1,0 +1,10 @@
+{
+    "header": {
+        "about": "Sobre mim",
+        "portfolio": "Portfólio",
+        "contact": "Contato"
+    },
+    "footer": {
+        "text": " Projetado e desenvolvido por "
+    }
+}

@@ -1,7 +1,7 @@
 import { Container } from "./styles";
 import { Project } from "@/data/projectData";
 import Image from "next/image";
-import { kodeMono } from "@/app/layout";
+import { kodeMono } from "@/app/[lang]/layout";
 import { FaGithub } from "react-icons/fa";
 import { BsPlayCircleFill } from "react-icons/bs";
 import { SiNextdotjs } from "react-icons/si";

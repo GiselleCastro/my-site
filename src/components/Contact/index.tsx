@@ -5,7 +5,7 @@ import { VscGithub } from "react-icons/vsc";
 import { AiOutlineWhatsApp } from "react-icons/ai";
 import { AiOutlineLinkedin } from "react-icons/ai";
 import { PiMapPinLine } from "react-icons/pi";
-import { kodeMono } from "@/app/layout";
+import { kodeMono } from "@/app/[lang]/layout";
 import { Button } from "../Button";
 import { FiSend } from "react-icons/fi";
 import { FaAnglesUp } from "react-icons/fa6";
@@ -35,10 +35,9 @@ export function Contact() {
                             <AiOutlineLinkedin size={'19px'} /> /in/gisellesc/
                         </a>
                     </div>
-                    <span>||</span>
                     <form action="">
                         <div>
-                            <label htmlFor=""><span>let</span> nome =</label>
+                            <label htmlFor=""><span>let</span> name =</label>
                             <input type="text" placeholder="// your name" className={kodeMono.className} />
                         </div>
 

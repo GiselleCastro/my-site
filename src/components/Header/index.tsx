@@ -1,10 +1,8 @@
 'use client'
 import { Background, Container } from "./styles";
-import { ToggleSwitchMode } from "../ToggleSwitchMode";
-import { Logo } from "../Logo";
 import { useEffect, useState } from "react";
 
-export function Header() {
+export function Header({ children }: { children: React.ReactNode }) {
     const [isShort, setIsShort] = useState<boolean>(false);
 
     useEffect(() => {
@@ -21,24 +19,11 @@ export function Header() {
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
 
+
     return (
         <Background>
             <Container className={'box'} short={String(isShort)}>
-                <Logo />
-                <nav>
-                    <ToggleSwitchMode />
-                    <ul>
-                        {/* <li><a href="">Home</a></li> */}
-                        <li><a href="#about-me">Sobre mim</a></li>
-                        <li><a href="#portfolio">Portfólio</a></li>
-                        <li><a href="#my-contacts">Contato</a></li>
-                    </ul>
-                    <button>
-                        <span>
-                            PT
-                        </span>
-                    </button>
-                </nav>
+                {children}
             </Container>
         </Background>
     )

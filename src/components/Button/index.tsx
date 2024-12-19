@@ -1,4 +1,4 @@
-import { kodeMono } from "@/app/layout";
+import { kodeMono } from "@/app/[lang]/layout";
 import { Container } from "./styles";
 
 interface ButtonProps {
