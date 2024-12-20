@@ -1,11 +1,13 @@
 import { Container } from "./styles";
 import { IconBlock } from "../IconBlock";
+import { kodeMono } from "@/app/[lang]/layout";
 
-export function Footer({ children }: { children: React.ReactNode }) {
+export function Footer({ info }) {
+    const currentYear = new Date().getFullYear();
     return (
         <Container>
             <div className='box'>
-                {children}
+                <span className={kodeMono.className}>Copyright &copy; {currentYear} &lt;&ne;.{info.footer.text}<strong>Giselle Castro</strong>_</span>
                 <IconBlock />
             </div>
         </Container>

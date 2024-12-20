@@ -126,6 +126,10 @@ export const Container = styled.section`
                 &:focus {
                     border: 1px solid ${props => props.theme["color-50"]};
                 }
+
+                &:invalid {
+                    /* border: 1px solid red; */
+                }
             }
 
             textarea {
@@ -141,9 +145,29 @@ export const Container = styled.section`
                 &:focus {
                     border: 1px solid ${props => props.theme["color-50"]};
                 }
+
+                &:invalid {
+                    /* border: 1px solid red; */
+                }
             }
         }
     }
+
+
+@media (max-width: 840px) {
+    main {
+        display: flex;
+        align-items: center;
+        gap: 48px;
+        flex-direction: column;
+        padding-inline: 0rem;
+        justify-content: space-between;
+    }
+
+    form {
+        width: 80%;
+    }
+}
 
 `
 export const Up = styled.a`

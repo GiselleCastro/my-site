@@ -1,3 +1,4 @@
+//"use client"
 import { Container, Up } from "./styles"
 import { TitleSection } from "../TitleSection"
 import { VscMail } from "react-icons/vsc";
@@ -11,6 +12,8 @@ import { FiSend } from "react-icons/fi";
 import { FaAnglesUp } from "react-icons/fa6";
 
 export function Contact() {
+    const myEmail = "giselle@fisica.ufc.br"
+
     return (
         <div id="my-contacts" className="box anchor">
             <Container >
@@ -22,12 +25,13 @@ export function Contact() {
                 </span>
                 <main>
                     <div id='links'>
-                        <a href="">
+                        <a href="https://wa.me/5585989368789">
                             <AiOutlineWhatsApp size={'18px'} /> +55 (85) 98936-8789
                         </a>
-                        <a href='' >
-                            <VscMail size={'22px'} /> giselle@fisica.ufc.br
+                        <a href={`malito:${myEmail}`}>
+                            <VscMail size={'22px'} /> {myEmail}
                         </a>
+                        {/* {showMessageTextCopied && <div id="message">Copiado!</div>} */}
                         <a href="https://github.com/GiselleCastro" target="_blank">
                             <VscGithub size={'17px'} /> /GiselleCastro
                         </a>
@@ -35,28 +39,28 @@ export function Contact() {
                             <AiOutlineLinkedin size={'19px'} /> /in/gisellesc/
                         </a>
                     </div>
-                    <form action="">
+                    <form action="" method="post">
                         <div>
-                            <label htmlFor=""><span>let</span> name =</label>
-                            <input type="text" placeholder="// your name" className={kodeMono.className} />
+                            <label htmlFor="name"><span>let</span> name =</label>
+                            <input id="name" name="name" type="text" required placeholder="// your name" className={kodeMono.className} />
                         </div>
 
                         <div>
-                            <label htmlFor=""><span>let</span> email = </label>
-                            <input type="email" className={kodeMono.className} placeholder="// your@mail.com" />
+                            <label htmlFor="email"><span>let</span> email = </label>
+                            <input id="email" name="email" type="email" required className={kodeMono.className} placeholder="// your@mail.com" />
                         </div>
 
                         <div>
-                            <label htmlFor=""><span>let</span> mensagem  = </label>
-                            <textarea className={kodeMono.className} placeholder="// your message" />
+                            <label htmlFor="message"><span>let</span> mensagem  = </label>
+                            <textarea id="message" name="message" required className={kodeMono.className} placeholder="// your message" />
                         </div>
-                        <Button type="submit" text=" Enviar Mensagem" >
+                        <Button type="submit" text="Enviar Mensagem" >
                             <FiSend />
                         </Button>
                     </form>
                 </main>
             </Container>
-            <Up id="up" href="#top">
+            <Up id="up" href="#/">
                 <FaAnglesUp />
             </Up>
         </div>

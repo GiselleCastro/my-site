@@ -9,6 +9,6 @@ export const Container =  styled.span`
     h1 {
         font-size: 2.5rem;
         letter-spacing: -2px;
-        text-shadow: 0.1em 0.1em 0.1em ${props => props.theme["color-0"]};
+        text-shadow: 0.0em 0.1em 0.2em ${props => props.theme["color-0"]};
     }
 `

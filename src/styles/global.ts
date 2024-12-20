@@ -45,11 +45,11 @@ p {
         padding: 0 4rem;
     }
 
-    @media (max-width: 980px) {
+    @media (max-width: 920px) {
         padding: 0 2rem;
     }
 
-    @media (max-width: 540px) {
+    @media (max-width: 840px) {
         padding: 0 1rem;
     }
 }

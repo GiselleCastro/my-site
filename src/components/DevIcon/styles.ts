@@ -10,6 +10,8 @@ export const Container = styled.span`
     padding: 6px 8px;
     border-radius: 48px;
     margin: 4px 4px;
-
     font-size: 0.875rem;
+
+    box-shadow: inset 0.0em 0.0em 1em 0.5em ${props => props.theme["color-25"]}80;
+
 `

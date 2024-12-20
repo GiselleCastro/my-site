@@ -29,12 +29,13 @@ export const useThemeContext = () => useContext(ThemeContext)
 export const ThemeContextProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
     const [theme, setTheme] = useState<ThemeEnum>(ThemeEnum.Dark);
 
-    const isValidTheme = (theme: string | null) => {
-        if (!theme) return false
-        return theme === ThemeEnum.Dark || theme === ThemeEnum.Light
-    }
 
     useEffect(() => {
+        const isValidTheme = (theme: string | null) => {
+            if (!theme) return false
+            return theme === ThemeEnum.Dark || theme === ThemeEnum.Light
+        }
+
         const localTheme = localStorage.getItem('theme');
         if (isValidTheme(localTheme)) setTheme(localTheme as ThemeEnum)
     }, []);

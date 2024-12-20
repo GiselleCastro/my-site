@@ -1,6 +1,6 @@
 'use client'
 import React, { useState } from 'react';
-import { useRouter } from 'next/navigation';
+import { useRouter, usePathname } from 'next/navigation';
 
 export enum LanguageEnum {
   en = "en",
@@ -10,16 +10,23 @@ export enum LanguageEnum {
 export type LanguageType = "en" | "pt";
 
 
-export function ToggleSwitchLanguage({ lang }: { lang: LanguageType }): React.ReactNode {
+export function ToggleSwitchLanguage(): React.ReactNode {
 
   const router = useRouter();
-  const [language, setLanguage] = useState<LanguageType>(lang);
+  const pathname = usePathname();
+  const languagePathname = pathname.slice(1, 3) as LanguageType;
+
+  const [language, setLanguage] = useState<LanguageType>(languagePathname);
 
   const toogleLanguage = () => {
     const updateLanguage = language === LanguageEnum.pt ? LanguageEnum.en : LanguageEnum.pt
     setLanguage(updateLanguage)
 
-    router.push(`/${updateLanguage}`)
+    const fragment = window.location.hash
+
+    const newPath = `${pathname}${fragment}`.replace(/\/(en|pt)/, `/${updateLanguage}`)
+
+    router.push(newPath)
   }
 
   return (

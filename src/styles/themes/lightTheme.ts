@@ -1,7 +1,7 @@
 export const lightTheme = {
     "color-100"  		 :"#000000",
     "color-95"   		 :"#050d14",
-    "color-90"  		 :"#0b1928",
+    "color-90"  		 :"#0b1928", //font
     "color-85"  	     :"#10253c",
     "color-80"  		 :"#153251",
     "color-75"  		 :"#1b3f65",
@@ -19,9 +19,9 @@ export const lightTheme = {
     "color-25"  		 :"#9abee4",
     "color-20"  		 :"#aecbea",
     "color-15"  		 :"#c3d8ef",
-    "color-10"  		 :"#d7e5f4", //font
+    "color-10"  		 :"#d7e5f4", // back
     "color-5"   		 :"#ebf2fa",
-    "color-0"         :"#ffffff",
+    "color-0"         :"#ffffff", //back
 
 
 

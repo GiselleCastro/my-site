@@ -62,5 +62,42 @@ export const Container = styled.main`
                 padding-inline: 3rem;
             }
         }
+
 }
+
+@media (max-width: 840px) {
+    padding: 0.5rem 0;
+
+    article{
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        min-height: 450px;
+        padding-inline: 1rem;
+        gap: 1.5rem;
+
+        p {
+            text-align: center;
+        }
+
+        #curriculum {
+            gap: 24px;
+        }
+
+        section {
+            padding-block: 0.75rem;
+        }
+
+        .img {
+            min-width: 200px;
+            max-width: 200px;
+            min-height: 200px;
+            max-height: 200px;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+
+    }
+}
+
 `

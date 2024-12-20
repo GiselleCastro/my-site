@@ -3,9 +3,9 @@ import { TitleMain } from "../TitleMain"
 import { IconBlock } from "../IconBlock"
 import { FaAnglesDown } from "react-icons/fa6";
 
-export function Presentation() {
+export function Presentation({ children }: { children: React.ReactNode }) {
     return (
-        <Background>
+        <Background id="/">
             <div className="box">
                 <Container >
                     <aside>
@@ -15,11 +15,10 @@ export function Presentation() {
                         </a>
                     </aside>
                     <section>
-                        <div>
-                            Olá, eu sou a <strong>Giselle Castro</strong>_
+                        <div >
+                            {children}
                             <TitleMain>
                                 Desenvolvedora Full Stack
-
                             </TitleMain>
                             Como posso ajudar a você impulsionar o seu negócio?
                         </div>

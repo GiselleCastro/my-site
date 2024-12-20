@@ -3,11 +3,7 @@ import styled from "styled-components";
 
 export const Background = styled.div`
 background: url('hexa.svg') repeat;
-/* background-image: radial-gradient(${props=> props.theme["color-5"]}e6 1px, transparent 1px, ${props=> props.theme["color-0"]}15 1px, transparent 1px); */
-/* background-size: 10px 10px;
-background-position: 0 0, 5px 5px;
-background-color: ${props=> props.theme["color-5"]}66; */
-animation: spin 15s linear infinite;
+animation: spin 20s linear infinite;
 
 @keyframes spin {
   0% {
@@ -68,5 +64,16 @@ export const Container = styled.main`
         div {
             max-width: 600px;
         }
+    }
+
+    @media (max-width: 840px) {
+
+      section {
+    
+
+        div {
+          
+        }
+    }
     }
 `

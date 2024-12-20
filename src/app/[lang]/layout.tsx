@@ -2,11 +2,10 @@ import type { Metadata } from "next";
 import { Geist_Mono, Kode_Mono } from "next/font/google";
 import { StyledComponentsRegistry } from "../../config/StyledComponentsRegistry";
 import { ThemeContextProvider } from "@/context/ThemeContext";
+import { getDictionary } from "@/app/[lang]/dictionaries";
 import { Header } from "@/components/Header"
 import { Footer } from "@/components/Footer"
-import { TextFooter } from "@/components/TextFooter";
 import { LanguageType } from "@/components/ToggleSwitchLanguage";
-import { Menu } from "@/components/Menu/menu";
 
 const geistMono = Geist_Mono({
   weight: '400',
@@ -37,6 +36,8 @@ export default async function RootLayout({
 
   const language = (await params).lang
 
+  const info = await getDictionary(language);
+
   return (
     <html lang={language} className={`${geistMono.className}`}>
       <head>
@@ -45,13 +46,9 @@ export default async function RootLayout({
       <body >
         <StyledComponentsRegistry>
           <ThemeContextProvider>
-            <Header >
-              <Menu lang={language} />
-            </Header>
+            <Header info={info} />
             {children}
-            <Footer>
-              <TextFooter lang={language} />
-            </Footer>
+            <Footer info={info} />
           </ThemeContextProvider>
         </StyledComponentsRegistry>
       </body>
