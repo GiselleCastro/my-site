@@ -6,8 +6,8 @@ import { VscGithub } from "react-icons/vsc";
 import { AiOutlineWhatsApp } from "react-icons/ai";
 import { AiOutlineLinkedin } from "react-icons/ai";
 import { PiMapPinLine } from "react-icons/pi";
-import { Button } from "../Button";
-import { FiSend } from "react-icons/fi";
+// import { Button } from "../Button";
+// import { FiSend } from "react-icons/fi";
 import { FaAnglesUp } from "react-icons/fa6";
 
 export function Contact() {

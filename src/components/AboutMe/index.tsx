@@ -3,8 +3,8 @@ import { TitleSection } from "../TitleSection"
 import Image from "next/image"
 import { DevIcon } from "../DevIcon"
 import { iconData } from "../../data/iconData"
-import { Button } from "../Button"
-import { GiJourney } from "react-icons/gi";
+// import { Button } from "../Button"
+// import { GiJourney } from "react-icons/gi";
 
 export async function AboutMe() {
     return (
