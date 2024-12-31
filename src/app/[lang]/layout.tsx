@@ -8,12 +8,12 @@ import { Footer } from "@/components/Footer"
 import { LanguageType } from "@/components/ToggleSwitchLanguage";
 import { Logo } from "@/components/Logo";
 
-export const kodeMono = Kode_Mono({
+const kodeMono = Kode_Mono({
   weight: '400',
   subsets: ["latin"],
 });
 
-export const openSans = Smokum({
+export const smokum = Smokum({
   weight: '400',
   subsets: ["latin"],
 });

@@ -1,8 +1,8 @@
 import { Container } from "./styles"
-import { openSans } from "@/app/[lang]/layout"
+import { smokum } from "@/app/[lang]/layout"
 
 export function Logo() {
-    return <Container href="#/" className={openSans.className}>
+    return <Container href="#/" className={smokum.className}>
         &lt;&ne;.
     </Container>
 }
