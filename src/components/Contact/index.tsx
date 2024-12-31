@@ -6,7 +6,6 @@ import { VscGithub } from "react-icons/vsc";
 import { AiOutlineWhatsApp } from "react-icons/ai";
 import { AiOutlineLinkedin } from "react-icons/ai";
 import { PiMapPinLine } from "react-icons/pi";
-import { kodeMono } from "@/app/[lang]/layout";
 import { Button } from "../Button";
 import { FiSend } from "react-icons/fi";
 import { FaAnglesUp } from "react-icons/fa6";
@@ -39,25 +38,25 @@ export function Contact() {
                             <AiOutlineLinkedin size={'19px'} /> /in/gisellesc/
                         </a>
                     </div>
-                    <form action="" method="post">
+                    {/* <form action="" method="post">
                         <div>
                             <label htmlFor="name"><span>let</span> name =</label>
-                            <input id="name" name="name" type="text" required placeholder="// your name" className={kodeMono.className} />
+                            <input id="name" name="name" type="text" required placeholder="// your name" />
                         </div>
 
                         <div>
                             <label htmlFor="email"><span>let</span> email = </label>
-                            <input id="email" name="email" type="email" required className={kodeMono.className} placeholder="// your@mail.com" />
+                            <input id="email" name="email" type="email" required placeholder="// your@mail.com" />
                         </div>
 
                         <div>
                             <label htmlFor="message"><span>let</span> mensagem  = </label>
-                            <textarea id="message" name="message" required className={kodeMono.className} placeholder="// your message" />
+                            <textarea id="message" name="message" required placeholder="// your message" />
                         </div>
                         <Button type="submit" text="Enviar Mensagem" >
                             <FiSend />
                         </Button>
-                    </form>
+                    </form> */}
                 </main>
             </Container>
             <Up id="up" href="#/">

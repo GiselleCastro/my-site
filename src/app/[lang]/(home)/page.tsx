@@ -1,8 +1,7 @@
 import { Presentation } from "@/components/Presentation"
 import { AboutMe } from "@/components/AboutMe"
 import { Contact } from "@/components/Contact"
-import { Projects } from "@/components/Projects"
-import { Modal } from "@/components/Modal"
+import { Portfolio } from "@/components/Portfolio"
 import { Animation } from "@/components/Presentation/animation"
 
 export default function Home() {
@@ -13,8 +12,7 @@ export default function Home() {
                 <Animation />
             </Presentation>
             <AboutMe />
-            <Modal />
-            <Projects />
+            <Portfolio />
             <Contact />
         </div>
     )

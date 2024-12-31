@@ -2,12 +2,11 @@
 import { Background, Container } from "./styles";
 import { useEffect, useState } from "react";
 import { ToggleSwitchMode } from "../ToggleSwitchMode";
-import { Logo } from "../Logo";
 import { ToggleSwitchLanguage } from "../ToggleSwitchLanguage";
 import { MdMenuOpen } from "react-icons/md";
 import { GrClose } from "react-icons/gr";
 
-export function Header({ info }) {
+export function Header({ info, children }) {
     const [isShort, setIsShort] = useState<boolean>(false);
 
     const [isShowMenuMobile, setIsShowMenuMobile] = useState<boolean>(false);
@@ -37,7 +36,7 @@ export function Header({ info }) {
     return (
         <Background menumobile={String(isShowMenuMobile)}>
             <Container className={'box'} short={String(isShort)} menumobile={String(isShowMenuMobile)}>
-                <Logo />
+                {children}
                 <nav>
                     <ToggleSwitchMode />
                     <ul>
@@ -45,9 +44,9 @@ export function Header({ info }) {
                         <li><a href="#portfolio" onClick={handleClickItemMenu}>{info.header.portfolio}</a></li>
                         <li><a href="#my-contacts" onClick={handleClickItemMenu}>{info.header.contact}</a></li>
                     </ul>
-                    {isShowMenuMobile && <button id="close" onClick={handleClickItemMenu}><GrClose /></button>}
+                    {isShowMenuMobile && <button id="close" aria-label="Fechar menu" onClick={handleClickItemMenu}><GrClose /></button>}
                     <ToggleSwitchLanguage />
-                    <button id="open" onClick={handleClickOpenMenu}><MdMenuOpen /></button>
+                    <button id="open" aria-label="Abrir menu" onClick={handleClickOpenMenu}><MdMenuOpen /></button>
                 </nav>
             </Container>
         </Background>

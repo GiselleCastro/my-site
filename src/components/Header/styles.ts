@@ -9,19 +9,8 @@ export const Background = styled.div<{menumobile: string}>`
     width: 100%;
 
     ${props => props.menumobile === 'true' ? `
-    box-shadow: inset 0px -40px 100vh 30vw ${props.theme["color-5"]};
-        background: url('background-mobile.svg') repeat;
-        animation: spin 30s linear infinite;
-
-        @keyframes spin {
-        0% {
-            background-position:-100% -100%;
-        }
-        50% {
-            background-position: 100% 100%;
-        }
-        100% {
-            background-position: 200% 200%;
+        box-shadow: inset 0px -40px 100vh 30vw ${props.theme["color-5"]};
+        background-color: ${props.theme["color-50"]};
         }
     `: ''}
 `
@@ -121,10 +110,6 @@ export const Container = styled.header<{short: string; menumobile: string}>`
         height: ${props =>  props.menumobile === 'true' ? '100vh' : props.short === 'true' ? '48px' : '88px' }; 
         transition: all 0.5s ease;
         
-        img {
-            display: ${props =>  props.menumobile === 'true' ? 'none' : 'flex'};
-        }
-
         nav {
             display: flex;
             flex-direction: 'row';

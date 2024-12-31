@@ -2,18 +2,33 @@
 import styled from "styled-components";
 
 export const Background = styled.div`
-background: url('hexa.svg') repeat;
-animation: spin 20s linear infinite;
+background: url('background.svg') repeat;
+background-size: cover;
+background-position-x: center;
+animation: spin 90s linear infinite;
 
 @keyframes spin {
   0% {
-    background-position:-100% -100%;
-  }
-  50% {
-    background-position: 100% 100%;
+    background-position-y: -10080px;
   }
   100% {
-    background-position: 200% 200%;
+    background-position-y: 10080px;
+  }
+}
+`
+
+export const BackgroundSecondary = styled.div`
+background: url('background.svg') repeat-y;
+background-size: 100% cover;
+background-position-x: 50%;
+animation: spin 55s linear infinite;
+
+@keyframes spin {
+  0% {
+    background-position-y: 10080px;
+  }
+  100% {
+    background-position-y: -10080px;
   }
 }
 `
@@ -62,17 +77,27 @@ export const Container = styled.main`
         justify-content: center;
 
         div {
-            max-width: 600px;
+            max-width: 540px;
+        }
+
+        #question {
+          padding-top: 48px;
+          width: 100%;
+          text-align: right;
         }
     }
 
     @media (max-width: 840px) {
-
+      justify-content: space-evenly;
+      flex-direction: column-reverse;
+      aside {
+        flex-direction: row;
+        gap: 36px;
+      }
       section {
-    
-
+        padding-top: 2rem;
         div {
-          
+          max-width: 360px;
         }
     }
     }

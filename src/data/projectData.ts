@@ -3,6 +3,9 @@ export interface Project {
     description: string;
     url: string;
     image: string;
+    imageFolder: string;
+    figma?: string;
+    inspiration?: string;
     gitHub: string;
     demo: string;
     date: Date;
@@ -12,20 +15,11 @@ export interface Project {
 export const projectData: Project[]= [
     {
     title: "Lacrei Saúde APP",
-    description: "Este repositório contém a implementação de três páginas web interativas desenvolvidas com foco na experiência do usuário, seguindo rigorosamente o guia de estilo da Lacrei Saúde. O projeto destaca um design acolhedor, interatividade criativa e responsividade, culminando em uma aplicação prática, funcional e acessível.",
+    description: "Este repositório contém a implementação de três páginas web interativas desenvolvidas com foco na experiência do usuário, seguindo rigorosamente o guia de estilo da Lacrei Saúde.",
     url: "https://lacrei-saude-app-fawn.vercel.app/",
     image: "https://github.com/GiselleCastro.png",
-    gitHub: "https://github.com/GiselleCastro/lacrei-saude-app",
-    demo: "https://github.com/GiselleCastro/lacrei-saude-app/blob/main/demo/demo-desktop.gif?raw=true",
-    date: new Date(),
-    teckStack: [
-        'typescript'
-    ]
-},{
-    title: "Lacrei Saúde APP 2",
-    description: "Este repositório contém a implementação de três páginas web interativas desenvolvidas com foco na experiência do usuário, seguindo rigorosamente o guia de estilo da Lacrei Saúde. O projeto destaca um design acolhedor, interatividade criativa e responsividade, culminando em uma aplicação prática, funcional e acessível.",
-    url: "https://lacrei-saude-app-fawn.vercel.app/",
-    image: "https://github.com/GiselleCastro.png",
+    imageFolder: "lacreiSaude",
+    inspiration:  "https://lacreisaude.com.br/",
     gitHub: "https://github.com/GiselleCastro/lacrei-saude-app",
     demo: "https://github.com/GiselleCastro/lacrei-saude-app/blob/main/demo/demo-desktop.gif?raw=true",
     date: new Date(),
@@ -34,45 +28,12 @@ export const projectData: Project[]= [
     ]
 },
 // {
-//     title: "Lacrei Saúde APP 3",
-//     description: "Este repositório contém a implementação de três páginas web interativas desenvolvidas com foco na experiência do usuário,",
+//     title: "To Do",
+//     description: "Este repositório contém a implementação de três páginas web interativas desenvolvidas com foco na experiência do usuário, seguindo rigorosamente o guia de estilo da Lacrei Saúde. ",
 //     url: "https://lacrei-saude-app-fawn.vercel.app/",
-//     image: "https://github.com/GiselleCastro.png",
-//     gitHub: "https://github.com/GiselleCastro/lacrei-saude-app",
-//     demo: "https://github.com/GiselleCastro/lacrei-saude-app/blob/main/demo/demo-desktop.gif?raw=true",
-//     date: new Date(),
-//     teckStack: [
-//         'typescript'
-//     ]
-// },
-// {
-//     title: "Lacrei Saúde APP 4",
-//     description: "Este repositório contém a implementação de três páginas web interativas desenvolvidas com foco na experiência do usuário, seguindo rigorosamente o guia de estilo da Lacrei Saúde. O projeto destaca um design acolhedor, interatividade criativa e responsividade, culminando em uma aplicação prática, funcional e acessível.",
-//     url: "https://lacrei-saude-app-fawn.vercel.app/",
-//     image: "https://github.com/GiselleCastro.png",
-//     gitHub: "https://github.com/GiselleCastro/lacrei-saude-app",
-//     demo: "https://github.com/GiselleCastro/lacrei-saude-app/blob/main/demo/demo-desktop.gif?raw=true",
-//     date: new Date(),
-//     teckStack: [
-//         'typescript'
-//     ]
-// },{
-//     title: "Lacrei Saúde APP 5",
-//     description: "Este repositório contém a implementação de três páginas web interativas desenvolvidas com foco na experiência do usuário, seguindo rigorosamente o guia de estilo da Lacrei Saúde. O projeto destaca um design acolhedor, interatividade criativa e responsividade, culminando em uma aplicação prática, funcional e acessível.",
-//     url: "https://lacrei-saude-app-fawn.vercel.app/",
-//     image: "https://github.com/GiselleCastro.png",
-//     gitHub: "https://github.com/GiselleCastro/lacrei-saude-app",
-//     demo: "https://github.com/GiselleCastro/lacrei-saude-app/blob/main/demo/demo-desktop.gif?raw=true",
-//     date: new Date(),
-//     teckStack: [
-//         'typescript'
-//     ]
-// },
-// {
-//     title: "Lacrei Saúde APP 6",
-//     description: "Este repositório contém a implementação de três páginas web interativas desenvolvidas com foco na experiência do usuário,",
-//     url: "https://lacrei-saude-app-fawn.vercel.app/",
-//     image: "https://github.com/GiselleCastro.png",
+//     image: "/demo.gif",
+//     inspiration:  "https://github.com/GiselleCastro.png",
+//     imageFolder: "toDo",
 //     gitHub: "https://github.com/GiselleCastro/lacrei-saude-app",
 //     demo: "https://github.com/GiselleCastro/lacrei-saude-app/blob/main/demo/demo-desktop.gif?raw=true",
 //     date: new Date(),

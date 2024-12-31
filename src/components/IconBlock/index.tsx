@@ -28,17 +28,17 @@ export function IconBlock() {
     }, [showMessageTextCopied]);
 
     return <>
-        <Container href="https://wa.me/5585989368789">
+        <Container href="https://wa.me/5585989368789" aria-label="Contato via Whatsapp">
             <AiOutlineWhatsApp size={'18px'} />
         </Container>
-        <Container href='' onClick={handlerClickCopyEmail}>
+        <Container href='' aria-label="Copiar e-mail de contato" onClick={handlerClickCopyEmail}>
             <VscMail size={'22px'} />
             {showMessageTextCopied && <div id="message">Copiado!</div>}
         </Container>
-        <Container href="https://github.com/GiselleCastro" target="_blank">
+        <Container href="https://github.com/GiselleCastro" aria-label="Acessar repositório no GitHub" target="_blank">
             <VscGithub size={'17px'} />
         </Container>
-        <Container href="https://www.linkedin.com/in/gisellesc/" target="_blank">
+        <Container href="https://www.linkedin.com/in/gisellesc/" aria-label="Acessar LinkedIn" target="_blank">
             <AiOutlineLinkedin size={'19px'} />
         </Container>
     </>

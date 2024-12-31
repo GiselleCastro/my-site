@@ -1,48 +1,64 @@
+"use client"
 import { Container } from "./styles";
 import { Project } from "@/data/projectData";
 import Image from "next/image";
-import { kodeMono } from "@/app/[lang]/layout";
-import { FaGithub } from "react-icons/fa";
 import { BsPlayCircleFill } from "react-icons/bs";
-import { SiNextdotjs } from "react-icons/si";
 import { FaReact } from "react-icons/fa6";
+import { SiNextdotjs } from "react-icons/si";
+import { FaGithub } from "react-icons/fa";
 import { SiStyledcomponents } from "react-icons/si";
 import { AiOutlineGlobal } from "react-icons/ai";
+import { useState } from "react";
+import { Modal } from "../Modal";
+import { MouseEvent } from "react";
 
 export function CardProject({ ...props }: Project) {
-    return <Container>
-        <div className="preview">
-            <a href={props.url} target="_blank">
-                <AiOutlineGlobal />
-            </a>
-        </div>
-        <Image className="project" src={props.image} width={500} height={500} quality={100} alt={props.title} />
+    const [showModal, setShowModal] = useState<boolean>(false);
 
-        <span>
-            {props.date.toDateString()}
-            <div>
-                <FaReact />  <SiStyledcomponents /> <SiNextdotjs />
-            </div>
-        </span>
+    const handleShowModal = (e: MouseEvent<HTMLElement>) => {
+        e.preventDefault()
+        setShowModal(!showModal)
+    }
 
-        <h3 className={kodeMono.className}>
-            {props.title}
-        </h3>
+    return (
+        <>
+            {showModal && <Modal handleShowModal={handleShowModal} {...props} />}
+            < Container >
+                <div className="preview">
+                    <a href={props.url} target="_blank">
+                        <AiOutlineGlobal />
+                    </a>
+                </div>
+                <Image className="project" src={`/projects/${props.imageFolder}/desktop.png`} width={500} height={500} quality={100} alt={props.title} />
 
-        <p>
-            {props.description}
-        </p>
+                <span>
+                    {props.date.toDateString()}
+                    <div>
+                        <FaReact />  <SiStyledcomponents /> <SiNextdotjs />
+                    </div>
+                </span>
 
-        <div className="access">
-            <a href={props.demo}>
-                <BsPlayCircleFill />
-                Demo
-            </a>
+                <h3 >
+                    {props.title}
+                </h3>
 
-            <a href={props.gitHub} target="_blank">
-                <FaGithub />
-                View Code
-            </a>
-        </div>
-    </Container>
+                <p>
+                    {props.description}
+                </p>
+
+                <div className="access">
+                    <a href="" onClick={handleShowModal} >
+                        <BsPlayCircleFill />
+                        Demo
+                    </a>
+
+                    <a href={props.gitHub} target="_blank">
+                        <FaGithub />
+                        View Code
+                    </a>
+                </div>
+            </Container >
+        </>
+    )
+
 }

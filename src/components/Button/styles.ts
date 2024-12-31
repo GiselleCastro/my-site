@@ -15,6 +15,7 @@ export const Container = styled.button`
             cursor: pointer;
             font-size: 1rem;
             line-height: 150%;
+            font-family: inherit;
 
             transition: 0.5s;
 
