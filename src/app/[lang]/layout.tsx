@@ -19,11 +19,6 @@ export const metadata: Metadata = {
   description: "Desenvolvedora Full Stack",
 };
 
-export async function generateStaticParams() {
-  return [{ lang: 'en-US' }, { lang: 'pt-BR' }]
-}
-
-
 export default async function RootLayout({
   children,
   params
