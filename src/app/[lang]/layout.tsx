@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Kode_Mono, Smokum } from "next/font/google";
+import { Kode_Mono } from "next/font/google";
 import { StyledComponentsRegistry } from "../../config/StyledComponentsRegistry";
 import { ThemeContextProvider } from "@/context/ThemeContext";
 import { getDictionary } from "@/app/[lang]/dictionaries";
@@ -13,10 +13,6 @@ const kodeMono = Kode_Mono({
   subsets: ["latin"],
 });
 
-export const smokum = Smokum({
-  weight: '400',
-  subsets: ["latin"],
-});
 
 export const metadata: Metadata = {
   title: "Giselle | Desenvolvedora Full Stack",
